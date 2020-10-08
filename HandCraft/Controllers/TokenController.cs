@@ -35,7 +35,7 @@ namespace HandCraft.Controllers
 
             if (_user != null && _user.Email != null && _user.PasswordHash != null)
             {
-                var user = await GetUser(_user.Email, _user.PasswordHash);
+                User user = await GetUser(_user.Email, _user.PasswordHash);
 
                 if (user != null)
                 {
@@ -44,12 +44,12 @@ namespace HandCraft.Controllers
                     new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                    new Claim("Id", user.UserId.ToString()),
+                    new Claim("Id", user.Id.ToString()),
                     new Claim("FirstName", user.FirstName),
                     new Claim("LastName", user.LastName),
                     new Claim("UserName", user.UserName),
                     new Claim("Email", user.Email),
-                    new Claim(“role”, “Admin”)
+                    new Claim("role", "Admin")
                    };
 
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
