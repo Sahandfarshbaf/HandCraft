@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Contracts
 {
-   public interface ISliderPlaceTypeRepository:IRepositoryBase<SliderPlaceType>
+   public interface ISliderPlaceRepository:IRepositoryBase<SliderPlace>
     {
 
     }

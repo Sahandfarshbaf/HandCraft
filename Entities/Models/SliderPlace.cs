@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Entities.Models
 {
-    public partial class SliderPlaceType
+    public partial class SliderPlace
     {
-        public SliderPlaceType()
+        public SliderPlace()
         {
             Slider = new HashSet<Slider>();
         }
@@ -13,13 +13,13 @@ namespace Entities.Models
         public long Id { get; set; }
         public string Name { get; set; }
         public long? Rkey { get; set; }
-        public string CuserId { get; set; }
+        public long? CuserId { get; set; }
         public long? Cdate { get; set; }
-        public string DuserId { get; set; }
+        public long? DuserId { get; set; }
         public long? Ddate { get; set; }
-        public string MuserId { get; set; }
+        public long? MuserId { get; set; }
         public long? Mdate { get; set; }
-        public string DaUserId { get; set; }
+        public long? DaUserId { get; set; }
         public long? DaDate { get; set; }
 
         public virtual ICollection<Slider> Slider { get; set; }

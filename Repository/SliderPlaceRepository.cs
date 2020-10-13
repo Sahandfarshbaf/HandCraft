@@ -7,9 +7,9 @@ using System.Text;
 
 namespace Repository
 {
-   public class SliderPlaceTypeRepository : RepositoryBase<SliderPlaceType>, ISliderPlaceTypeRepository
+   public class SliderPlaceRepository : RepositoryBase<SliderPlace>, ISliderPlaceRepository
     {
-        public SliderPlaceTypeRepository(RepositoryContext repositoryContext)
+        public SliderPlaceRepository(RepositoryContext repositoryContext)
             : base(repositoryContext)
         {
 

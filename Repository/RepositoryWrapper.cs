@@ -25,7 +25,7 @@ namespace Repository
         private ISystemsRepository _systems;
         private ITablesRepository _tables;
         private ICatProductParametersRepository _catProductParameters;
-        private ISliderPlaceTypeRepository _sliderPlaceType;
+        private ISliderPlaceRepository _sliderPlace;
         private ISliderRepository _slider;
         private ICustomerRepository _customer;
         private ICustomerOrderRepository _customerOrder;
@@ -55,7 +55,7 @@ namespace Repository
         public ISystemsRepository Systems => _systems ??= new SystemsRepository(_repoContext);
         public ITablesRepository Tables => _tables ??= new TablesRepository(_repoContext);
         public ICatProductParametersRepository CatProductParameters => _catProductParameters ??= new CatProductParametersRepository(_repoContext);
-        public ISliderPlaceTypeRepository SliderPlaceType => _sliderPlaceType ??= new SliderPlaceTypeRepository(_repoContext);
+        public ISliderPlaceRepository SliderPlace => _sliderPlace ??= new SliderPlaceRepository(_repoContext);
         public ISliderRepository Slider => _slider ??= new SliderRepository(_repoContext);
         public ICustomerRepository Customer => _customer ??= new CustomerRepository(_repoContext);
         public ICustomerOrderRepository CustomerOrder => _customerOrder ??= new CustomerOrderRepository(_repoContext);

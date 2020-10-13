@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Entities.Models
 {
@@ -48,7 +47,6 @@ namespace Entities.Models
         public virtual Status FinalStatus { get; set; }
         public virtual ProductMeter ProductMeter { get; set; }
         public virtual Seller Seller { get; set; }
-        [JsonIgnore]
         public virtual ICollection<CustomerOrderProduct> CustomerOrderProduct { get; set; }
         public virtual ICollection<ProductCustomerComments> ProductCustomerComments { get; set; }
         public virtual ICollection<ProductCustomerRate> ProductCustomerRate { get; set; }

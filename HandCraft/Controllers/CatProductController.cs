@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,25 @@ namespace HandCraft.Controllers
          
             _repository = repository;
             _mapper = mapper;
+        }
+        [HttpPost]
+        [Route("CatProduct/InserCatProduct")]
+        public IActionResult InserCatProduct(CatProduct catProduct)
+        {
+            try
+            {
+                
+
+                _repository.CatProduct.Create(catProduct);
+                _repository.Save();
+                return Created("", catProduct);
+            }
+            catch (Exception e)
+            {
+                return BadRequest("");
+            }
+
+
         }
 
         [HttpGet]

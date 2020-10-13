@@ -23,7 +23,7 @@ namespace Contracts
         ISystemsRepository Systems { get; }
         ITablesRepository Tables { get; }
         ICatProductParametersRepository CatProductParameters { get; }
-        ISliderPlaceTypeRepository SliderPlaceType { get; }
+        ISliderPlaceRepository SliderPlace { get; }
         ISliderRepository Slider { get; }
         ICustomerRepository Customer { get; }
         ICustomerOrderRepository CustomerOrder { get; }
